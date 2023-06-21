@@ -1,11 +1,9 @@
 {
 	"name": "mini-react",
 	"version": "1.0.0",
-	"description": "",
+	"description": "a simple repo for react",
 	"scripts": {
-		"lint": "eslint --ext .ts,.js,.jsx,.tsx --fix --quiet ./packages",
-		"prepare": "husky install",
-		"commitlint": "commitlint --config commitlint.config.js -e -V"
+		"lint": "eslint --ext .ts,.js,.jsx,.tsx --fix --quiet ./packages"
 	},
 	"keywords": [],
 	"author": "",
