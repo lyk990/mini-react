@@ -3,5 +3,8 @@
 	"version": "1.0.0",
 	"keywords": [],
 	"author": "",
-	"license": "ISC"
+	"license": "ISC",
+	"dependencies": {
+		"react": "workspace:*"
+	}
 }

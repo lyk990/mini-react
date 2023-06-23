@@ -32,22 +32,21 @@ export default [
 				})
 			})
 		]
+	},
+	{
+		input: `${pkgPath}/src/jsx.ts`,
+		output: [
+			{
+				file: `${pkgDistPath}/jsx-dev-runtime.js`,
+				name: 'jsx-dev-runtime.js',
+				format: 'umd'
+			},
+			{
+				file: `${pkgDistPath}/jsx-runtime.js`,
+				name: 'jsx-runtime.js',
+				format: 'umd'
+			}
+		],
+		plugins: basePlugins
 	}
-	// jsx-runtime
-	// {
-	// 	input: `${pkgPath}/src/jsx.ts`,
-	// 	output: [
-	// 		{
-	// 			file: `${pkgDistPath}/jsx-dev-runtime.js`,
-	// 			name: 'jsx-dev-runtime.js',
-	// 			format: 'umd'
-	// 		},
-	// 		{
-	// 			file: `${pkgDistPath}/jsx-runtime.js`,
-	// 			name: 'jsx-runtime.js',
-	// 			format: 'umd'
-	// 		}
-	// 	],
-	// 	plugins: basePlugins
-	// }
 ];

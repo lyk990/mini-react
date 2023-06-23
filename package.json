@@ -2,14 +2,18 @@
 	"name": "mini-react",
 	"version": "1.0.0",
 	"description": "a simple repo for react",
+	"keywords": [
+		"react",
+		"mini-react",
+		"learn react"
+	],
+	"author": "lyk990",
+	"license": "MIT",
 	"scripts": {
-		"build": "rimraf node_modules,dist && rollup --config scripts/rollup/dev.config.ts --configPlugin typescript",
+		"build": "rimraf dist && rollup --config scripts/rollup/dev.config.ts --configPlugin typescript",
 		"lint": "eslint --ext .ts,.js,.jsx,.tsx --fix --quiet ./packages",
 		"rm": "rimraf dist && rimraf node_modules"
 	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
 	"devDependencies": {
 		"@babel/core": "^7.18.6",
 		"@babel/plugin-transform-react-jsx": "^7.17.12",

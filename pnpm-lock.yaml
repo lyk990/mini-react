@@ -123,7 +123,17 @@ importers:
         specifier: workspace:*
         version: link:../shared
 
-  packages/shared: {}
+  packages/react-reconciler:
+    dependencies:
+      shared:
+        specifier: 'workspace: *'
+        version: link:../shared
+
+  packages/shared:
+    dependencies:
+      react:
+        specifier: workspace:*
+        version: link:../react
 
 packages:
 
