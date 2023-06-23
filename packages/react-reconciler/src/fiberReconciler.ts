@@ -17,7 +17,9 @@ export function createContainer(container: Container) {
 	hostRootFiber.updateQueue = createUpdateQueue<ReactElement>();
 	return root;
 }
-/**render触发 */
+
+// reactDOM.createRoot(root).render(<App/>)
+/**触发render */
 export function updateContainer(
 	element: ReactElement | null,
 	root: FiberRootNode
