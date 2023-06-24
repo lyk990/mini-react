@@ -1,5 +1,5 @@
 {
-	"name": "react",
+	"name": "mini-react",
 	"version": "0.0.0",
 	"module": "index.ts",
 	"dependencies": {

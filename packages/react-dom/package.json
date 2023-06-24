@@ -1,0 +1,14 @@
+{
+	"name": "react-dom",
+	"version": "0.0.0",
+	"description": "",
+	"module": "index.ts",
+	"dependencies": {
+		"shared": "workspace:*",
+		"react-reconciler": "workspace:*",
+		"scheduler": "^0.23.0"
+	},
+	"peerDependencies": {
+		"mini-react": "workspace:*"
+	}
+}
