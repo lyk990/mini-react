@@ -168,9 +168,9 @@ importers:
 
   packages/react-dom:
     dependencies:
-      mini-react:
+      react:
         specifier: workspace:*
-        version: link:../..
+        version: link:../react
       react-reconciler:
         specifier: workspace:*
         version: link:../react-reconciler
@@ -189,9 +189,9 @@ importers:
 
   packages/shared:
     dependencies:
-      mini-react:
+      react:
         specifier: workspace:*
-        version: link:../..
+        version: link:../react
 
 packages:
 

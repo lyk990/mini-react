@@ -26,6 +26,7 @@ let workInProgressHook: Hook | null = null;
 let currentHook: Hook | null = null;
 let currentlyRenderingFiber: FiberNode | null = null;
 let renderLanes: Lanes = NoLanes;
+// hooks数据结构
 interface Hook {
 	memoizedState: any;
 	// 对于state，保存update相关数据
@@ -34,7 +35,7 @@ interface Hook {
 	baseQueue: Update<any> | null;
 	// 对于state，基于baseState开始计算更新，与memoizedState的区别在于上次更新是否存在跳过
 	baseState: any;
-	next: Hook | null;
+	next: Hook | null; // 指向下一个hook
 }
 
 const { currentDispatcher } = sharedInternals;
