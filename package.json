@@ -12,7 +12,8 @@
 	"scripts": {
 		"build": "rimraf dist && rollup --config scripts/rollup/dev.config.ts --configPlugin typescript",
 		"lint": "eslint --ext .ts,.js,.jsx,.tsx --fix --quiet ./packages",
-		"rm": "rimraf dist && rimraf node_modules"
+		"rm": "rimraf dist && rimraf node_modules",
+		"test": "jest --config scripts/jest/jest.config.js"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.18.6",
