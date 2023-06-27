@@ -69,7 +69,7 @@ export const createUpdateQueue = <Action>() => {
 	return updateQueue;
 };
 
-// 触发update方法
+// 消费
 export const processUpdateQueue = <State>(
 	baseState: State,
 	pendingUpdate: Update<State> | null,
@@ -81,7 +81,7 @@ export const processUpdateQueue = <State>(
 	baseQueue: null | Update<State>;
 } => {
 	const result: ReturnType<typeof processUpdateQueue<State>> = {
-		memoizedState: baseState, // 更新完成之后新的state
+		memoizedState: baseState,
 		baseState,
 		baseQueue: null,
 		skippedUpdateLanes: NoLanes

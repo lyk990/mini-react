@@ -39,7 +39,7 @@ const {
 	unstable_shouldYield: schedulerShouldYield
 } = scheduler;
 
-let workInProgress: FiberNode | null = null; // 当前正在工作的fiberNode
+let workInProgress: FiberNode | null = null;
 let workInProgressRootRenderLane: Lanes = NoLanes;
 
 type ExecutionContext = number;
@@ -57,12 +57,11 @@ const RootCompleted = 2;
 
 // 与调度effect相关
 let rootDoesHavePassiveEffects = false;
-/**Fiber调度功能 */
+
 export function scheduleUpdateOnFiber(fiber: FiberNode, lane: Lane) {
 	if (__LOG__) {
 		console.log('开始schedule阶段', fiber, lane);
 	}
-	// 拿到的是fiberRootNode
 	const root = markUpdateLaneFromFiberToRoot(fiber, lane);
 	// TODO 饥饿问题
 	markRootUpdated(root, lane);
@@ -372,19 +371,16 @@ function workLoopConcurrent() {
 }
 
 function performUnitOfWork(fiber: FiberNode) {
-	// 对子节点遍历，然后更新
 	const next = beginWork(fiber, workInProgressRootRenderLane);
 	// 执行完beginWork后，pendingProps 变为 memoizedProps
 	fiber.memoizedProps = fiber.pendingProps;
-	// 有子节点就遍历子节点
-	// 没有就遍历兄弟节点
 	if (next === null) {
 		completeUnitOfWork(fiber);
 	} else {
 		workInProgress = next;
 	}
 }
-/**遍历兄弟节点 */
+
 function completeUnitOfWork(fiber: FiberNode) {
 	let node: FiberNode | null = fiber;
 
